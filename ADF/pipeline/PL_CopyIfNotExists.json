@@ -52,10 +52,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@activity('Check File Existence').output.exists",
+						"value": "@not(activity('Check File Existence').output.exists)",
 						"type": "Expression"
 					},
-					"ifFalseActivities": [
+					"ifTrueActivities": [
 						{
 							"name": "Copy File",
 							"type": "Copy",
